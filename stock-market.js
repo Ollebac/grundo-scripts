@@ -25,7 +25,7 @@
         let stocksLength = stocks.length;
 
         for (let i = 0; i <= stocksLength; i++) {
-            let stockBackground = stocks[i].querySelector('td:nth-of-type(9)');
+            let stockBackground = stocks[i];
             let stockData = stocks[i].querySelector('td:nth-of-type(9) :nth-child(1)').textContent;
             let stockPercent = parseFloat(stockData);
 
