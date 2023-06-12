@@ -66,10 +66,6 @@
                 }
             });
 
-            //console.log(`Evavu: ${evavu}`);
-            //console.log(`Tyranu: ${tyranu}`);
-            //console.log(`Dupe: ${dupe}`);
-
             let successChance = 0;
 
             if (evavu > tyranu) {
@@ -87,7 +83,7 @@
             console.log(`Chance of Success: ${successChance}%`);
             localStorage.setItem('cardsAvailable', cardsAvailable);
 
-            var percent = document.createElement('div');
+            let percent = document.createElement('div');
             percent.id = 'percent';
             percent.textContent = `Chance: ${successChance}%`;
             document.querySelector("body").prepend(percent);
@@ -118,18 +114,16 @@
         min-height: 100em !important;
       }
 
-.te-buttons > form > input {
-display: none;
-}
+      .te-buttons > form > input {
+        display: none;
+      }
 
       #correctChoice {
         display: block;
         filter: drop-shadow(0 0 1.2rem red);
         padding: 20px;
         transform: scale(1.4);
-}
-    `;
+     }`;
 
     $("<style>").prop("type", "text/css").html(customCSS).appendTo("head");
-    // Your code here...
 })();
